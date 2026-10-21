@@ -8,6 +8,10 @@ A tiny Windows tray app that shows your laptop's **live power draw in watts** ne
 |---|---|
 | ![On battery](docs/panel-battery.png) | ![Plugged in](docs/panel-plugged.png) |
 
+## Why
+
+I made this with Claude, using Opus 5.5. I needed it, and there weren't any good apps that made this easy.
+
 ## Features
 
 - Live watts in the taskbar, colored green / orange / red (under 15 W, 15–25 W, over 25 W)
