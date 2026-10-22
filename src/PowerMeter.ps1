@@ -261,6 +261,7 @@ function Show-Data($d) {
 }
 
 function Open-Panel {
+    if ($menu.Visible) { return }   # showing the panel closes the open menu
     $script:anchor = [System.Windows.Forms.Cursor]::Position
     $script:lastMove = Get-Date
     if (-not $panel.Visible) { $panel.Data = $script:data; $panel.ShowAt($script:anchor) }
