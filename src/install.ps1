@@ -5,11 +5,8 @@ trap {
     Write-Host "`nInstall failed: $_" -ForegroundColor Red
     exit 1
 }
-$src  = Join-Path $PSScriptRoot 'src'
+$src  = $PSScriptRoot
 $dest = Join-Path $env:LOCALAPPDATA 'PowerMeter'
-if (-not (Test-Path (Join-Path $src 'PowerMeter.ps1'))) {
-    throw "The 'src' folder is missing next to install.ps1. Extract the whole zip first, then run install.cmd from the extracted folder."
-}
 
 # Stop a running copy so its files can be replaced
 Get-CimInstance Win32_Process -Filter "Name='powershell.exe'" |
