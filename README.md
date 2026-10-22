@@ -28,7 +28,7 @@ I made this with Claude, using Opus 5.5. I needed it, and there weren't any good
 
 No admin rights needed. It installs to `%LOCALAPPDATA%\PowerMeter`, adds a desktop shortcut, and starts with Windows.
 
-To remove it, right-click `uninstall.ps1` → **Run with PowerShell**.
+To remove it, double-click `uninstall.cmd`.
 
 ## Notes
 

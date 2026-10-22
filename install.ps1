@@ -1,17 +1,14 @@
 ﻿# Installs Power Meter for the current user. No admin rights needed.
-# Usage: right-click install.ps1 > "Run with PowerShell"
-#    or: powershell -ExecutionPolicy Bypass -File install.ps1
+# Usage: double-click install.cmd
 $ErrorActionPreference = 'Stop'
-# Keep the window open on failure so the error can be read
 trap {
     Write-Host "`nInstall failed: $_" -ForegroundColor Red
-    Read-Host 'Press Enter to close'
     exit 1
 }
 $src  = Join-Path $PSScriptRoot 'src'
 $dest = Join-Path $env:LOCALAPPDATA 'PowerMeter'
 if (-not (Test-Path (Join-Path $src 'PowerMeter.ps1'))) {
-    throw "The 'src' folder is missing next to install.ps1. Extract the whole zip first, then run install.ps1 from the extracted folder."
+    throw "The 'src' folder is missing next to install.ps1. Extract the whole zip first, then run install.cmd from the extracted folder."
 }
 
 # Stop a running copy so its files can be replaced
@@ -44,4 +41,3 @@ foreach ($lnk in (Join-Path ([Environment]::GetFolderPath('Desktop')) 'Power Met
 
 Start-Process "$dest\PowerMeter.exe"
 Write-Host "Power Meter installed to $dest and started. Look for the watt number next to the clock." -ForegroundColor Green
-Read-Host 'Press Enter to close'

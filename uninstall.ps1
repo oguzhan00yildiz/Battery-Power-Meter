@@ -1,5 +1,5 @@
 ﻿# Removes Power Meter: stops it, deletes its shortcuts and its folder.
-# Usage: powershell -ExecutionPolicy Bypass -File uninstall.ps1
+# Usage: double-click uninstall.cmd
 $dest = Join-Path $env:LOCALAPPDATA 'PowerMeter'
 
 Get-CimInstance Win32_Process -Filter "Name='powershell.exe'" |
