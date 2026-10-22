@@ -24,11 +24,11 @@ I made this with Claude, using Opus 5.5. I needed it, and there weren't any good
 ## Install
 
 1. Download this repo (**Code → Download ZIP**) and extract it.
-2. Right-click `install.ps1` → **Run with PowerShell**.
+2. Double-click `install.cmd`.
 
 No admin rights needed. It installs to `%LOCALAPPDATA%\PowerMeter`, adds a desktop shortcut, and starts with Windows.
 
-To remove it, run `uninstall.ps1` the same way.
+To remove it, right-click `uninstall.ps1` → **Run with PowerShell**.
 
 ## Notes
 
